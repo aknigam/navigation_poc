@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/actionHome">
+
+    <fragment
+        android:id="@+id/actionHome"
+        android:name="auth.example.andy.navigation_poc.actionHome"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home" />
+    <fragment
+        android:id="@+id/actionDashboard"
+        android:name="auth.example.andy.navigation_poc.actionDashboard"
+        android:label="fragment_dashboard"
+        tools:layout="@layout/fragment_dashboard" />
+
+    <fragment
+        android:id="@+id/actionNotifications"
+        android:name="auth.example.andy.navigation_poc.actionNotifications"
+        android:label="@string/titleNotifications"
+        tools:layout="@layout/fragment_notifications" >
+
+    <action
+        android:id="@+id/openNotificationDetailsAction"
+        app:destination="@id/notificationDetails"
+        app:enterAnim="@anim/nav_default_enter_anim"
+        app:exitAnim="@anim/nav_default_exit_anim"
+        app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+        app:popExitAnim="@anim/nav_default_pop_exit_anim"
+        app:popUpTo="@+id/actionNotifications" />
+
+    </fragment>
+    <fragment
+        android:id="@+id/notificationDetails"
+        android:name="auth.example.andy.navigation_poc.notificationDetails"
+        android:label="fragment_notification_details"
+        tools:layout="@layout/fragment_notification_details" >
+
+        <argument
+            android:name="notificationId"
+            android:defaultValue='""'
+            app:argType="string"/>
+
+    </fragment>
+
+
+
+
+</navigation>
