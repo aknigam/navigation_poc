@@ -11,12 +11,14 @@ import android.view.View;
 
 import androidx.navigation.NavController;
 import androidx.navigation.NavDestination;
+import androidx.navigation.NavDirections;
 import androidx.navigation.Navigation;
 import androidx.navigation.ui.NavigationUI;
 import auth.example.andy.navigation_poc.R;
 import auth.example.andy.navigation_poc.actionDashboard;
 import auth.example.andy.navigation_poc.actionHome;
 import auth.example.andy.navigation_poc.actionNotifications;
+import auth.example.andy.navigation_poc.actionNotificationsDirections;
 import auth.example.andy.navigation_poc.notificationDetails;
 
 /**
@@ -61,5 +63,11 @@ public class MainActivity extends AppCompatActivity implements actionHome
     @Override
     public void onDestinationChanged(@NonNull NavController controller, @NonNull NavDestination destination, @Nullable Bundle arguments) {
         Log.d("MAIN", "message");
+    }
+
+    public void viewProfile(View view) {
+
+        NavDirections action = actionNotificationsDirections.actionActionNotificationsToViewProfile();
+        Navigation.findNavController(this, R.id.mainNavigationFragment).navigate(action);
     }
 }
