@@ -17,6 +17,7 @@
             </intent-filter>
         </activity>
         <activity android:name="auth.example.andy.navigation.ViewProfile" />
+        <activity android:name=".HistoryActivity"></activity>
     </application>
 
 </manifest>

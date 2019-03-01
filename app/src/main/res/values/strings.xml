@@ -9,4 +9,7 @@
     <string name="dashboard">dashboard</string>
     <string name="notifications">notifications</string>
     <string name="view_profile">profile activity</string>
+    <string name="view_zoom">view zoom poc</string>
+    <string name="description_image_1">thumbnail</string>
+    <string name="description_zoom_touch_close">Zoomed image</string>
 </resources>

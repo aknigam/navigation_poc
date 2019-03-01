@@ -33,6 +33,9 @@
         <action
             android:id="@+id/action_actionNotifications_to_viewProfile"
             app:destination="@id/viewProfile" />
+        <action
+            android:id="@+id/action_actionNotifications_to_zoomAnimationDemo"
+            app:destination="@id/zoomAnimationDemo" />
 
     </fragment>
     <fragment
@@ -52,6 +55,39 @@
         android:name="auth.example.andy.navigation.ViewProfile"
         android:label="activity_view_profile"
         tools:layout="@layout/activity_view_profile" />
+    <fragment
+        android:id="@+id/nestGraphFragmentA"
+        android:name="auth.example.andy.navigation_poc.NestGraphFragmentA"
+        android:label="fragment_nest_graph"
+        tools:layout="@layout/fragment_nest_graph" />
+    <fragment
+        android:id="@+id/detailedProfile"
+        android:name="auth.example.andy.navigation_poc.DetailedProfile"
+        android:label="fragment_detailed_profile"
+        tools:layout="@layout/fragment_detailed_profile" />
+    <activity
+        android:id="@+id/historyActivity"
+        android:name="auth.example.andy.navigation_poc.HistoryActivity"
+        android:label="activity_history"
+        tools:layout="@layout/activity_history" />
+    <fragment
+        android:id="@+id/zoomAnimationDemo"
+        android:name="auth.example.andy.navigation_poc.ZoomAnimationDemo"
+        android:label="fragment_zoom_animation_demo"
+        tools:layout="@layout/fragment_zoom_animation_demo" >
+        <action
+            android:id="@+id/action_zoomAnimationDemo_to_pincZoomImage"
+            app:destination="@id/pincZoomImage" />
+    </fragment>
+    <fragment
+        android:id="@+id/pincZoomImage"
+        android:name="auth.example.andy.navigation_poc.PincZoomImage"
+        android:label="fragment_pinc_zoom_image"
+        tools:layout="@layout/fragment_pinc_zoom_image" >
+        <argument
+            android:name="imgResId"
+            app:argType="integer" />
+    </fragment>
 
 
 </navigation>
